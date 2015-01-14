@@ -13,6 +13,7 @@ class Game(LineOnlyReceiver):
 
     def getId(self):
         return str(self.transport.getPeer())
+
     def connectionMade(self):
         print "New User Login:", self.getId()
         self.transport.write("欢迎来到MMO世界！\n")
@@ -69,5 +70,5 @@ class GameFactory(Factory):
                  for proto in self.clients:
                       proto.transport.write(self.msg+'\n')
 
-reactor.listenTCP(1234, GameFactory())
+reactor.listenTCP(1235, GameFactory())
 reactor.run()
