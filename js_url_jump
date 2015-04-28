@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>test</title>
+<script language="javascript">
+{#window.onload = function () {#}
+function myfunction(){
+var u = navigator.userAgent;
+if (u.indexOf('Android') > -1 || u.indexOf('Linux') > -1) {//安卓手机
+{#alert("安卓手机");#}
+    window.location.href = "http://www.baidu.com";
+} else if (u.indexOf('iPhone') > -1) {//苹果手机
+    window.location.href = "http://www.163.com";
+{#alert("苹果手机");#}
+} else if (u.indexOf('Windows Phone') > -1) {//winphone手机
+{#alert("winphone手机");#}
+// window.location.href = "mobile/index.html";
+}
+}
+</script>
+</head>
+<body>
+{#    <a href="http://www.baidu.com" >下载</a>#}
+    <input type="button" onclick="myfunction()" value="调用函数">
+</body>
+</html>
