@@ -1,0 +1,9 @@
+def te(a,b):
+    c = yield a>b
+    d = yield b>a
+    print c,d
+
+if __name__ == '__main__':
+    t = te(1,2)
+    print t.next()
+    print t.next()
