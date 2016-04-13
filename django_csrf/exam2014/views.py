@@ -9,5 +9,6 @@ def select_drug(request):
         drugs_id_list = drugs_id.strip().split(' ')
         return HttpResponse(','.join(drugs_id_list))
     else:
-        drugs = BioDrug.objects.filter(inputer__isnull=True)
+        # drugs = BioDrug.objects.filter(inputer__isnull=True)
+        drugs = [{"id":1,"name":"one"}, {"id":2,"name":"two"}]
         return render(request,'exam2014/index.html',{'drugs': drugs})
