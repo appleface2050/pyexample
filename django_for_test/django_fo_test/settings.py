@@ -27,6 +27,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+AUTH_USER_MODEL = "polls.BSUser"
 
 # Application definition
 
@@ -56,7 +57,7 @@ ROOT_URLCONF = 'django_fo_test.urls'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',  # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
-        'NAME': 'for_test',  # Or path to database file if using sqlite3.
+        'NAME': 'for_test4',  # Or path to database file if using sqlite3.
         'USER': 'bluestackscntest',  # Not used with sqlite3.
         'PASSWORD': 'Bluestacks2016test',  # Not used with sqlite3.
         # 'HOST': 'rdsmizy48ivz81cwa9uvt.mysql.rds.aliyuncs.com',
@@ -142,10 +143,11 @@ LOGIN_REDIRECT_URL = '/polls/'
 # EMAIL_PORT = 465
 
 
-# EMAIL_HOST = 'smtp.163.com'
-# EMAIL_PORT = 25
-# EMAIL_HOST_USER = 'google2050@163.com'
-# EMAIL_HOST_PASSWORD = '1163214465'
-# EMAIL_USE_TLS = False
-# DEFAULT_FROM_EMAIL = 'google2050@163.com'
-# EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.163.com'
+EMAIL_PORT = 25
+EMAIL_HOST_USER = 'google2050@163.com'
+EMAIL_HOST_PASSWORD = '1163214465'
+EMAIL_USE_TLS = False
+DEFAULT_FROM_EMAIL = 'google2050@163.com'
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+

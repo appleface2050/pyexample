@@ -17,13 +17,15 @@ from django.conf.urls import url, include
 from django.contrib import admin
 from django.contrib.auth import views as auth_views
 
+from django_fo_test.views import RegisterView
+
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^polls/', include('polls.urls')),
     # url(r'^accounts/login/$', auth_views.login),
     url('^', include('django.contrib.auth.urls')),
     url(r'^accounts/login/$', auth_views.login, {'template_name': 'registration/login.html'}),
-
+    url(r'^register$', RegisterView.as_view(), name='register'),
 
     # url(r'^forgot-password/$', auth_views.forgot_password, name="forgot-password"),
     # url(r'^password/change/$', auth_views.password_change, name='password_change'),
