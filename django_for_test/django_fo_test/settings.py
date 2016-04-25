@@ -128,3 +128,6 @@ TEMPLATE_DIRS = (
     # os.path.join(BASE_DIR, 'bluestacks/templates'),
     os.path.join(BASE_DIR, 'templates'),
 )
+
+LOGIN_URL = "/login/"
+LOGIN_REDIRECT_URL = '/polls/'

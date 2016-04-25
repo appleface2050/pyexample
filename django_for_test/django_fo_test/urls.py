@@ -22,5 +22,5 @@ urlpatterns = [
     url(r'^polls/', include('polls.urls')),
     # url(r'^accounts/login/$', auth_views.login),
     url('^', include('django.contrib.auth.urls')),
-    url(r'^accounts/login/$', auth_views.login, {'template_name': 'login.html'}),
+    url(r'^accounts/login/$', auth_views.login, {'template_name': 'registration/login.html'}),
 ]

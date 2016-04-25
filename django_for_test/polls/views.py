@@ -39,6 +39,9 @@ def my_view(request):
 
 from .models import Question
 
+
+
+@login_required
 def index(request):
     latest_question_list = Question.objects.order_by('-pub_date')[:5]
     context = {'latest_question_list': latest_question_list}
