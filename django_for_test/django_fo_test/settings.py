@@ -85,18 +85,21 @@ WSGI_APPLICATION = 'django_fo_test.wsgi.application'
 # https://docs.djangoproject.com/en/1.9/ref/settings/#auth-password-validators
 
 AUTH_PASSWORD_VALIDATORS = [
-    {
-        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
-    },
+    # {
+    #     'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
+    # },
     {
         'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
+        'OPTIONS': {
+            'min_length': 6,
+        }
     },
     {
         'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
     },
-    {
-        'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
-    },
+    # {
+    #     'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
+    # },
 ]
 
 
@@ -131,3 +134,18 @@ TEMPLATE_DIRS = (
 
 LOGIN_URL = "/login/"
 LOGIN_REDIRECT_URL = '/polls/'
+
+
+#for reset password
+# EMAIL_SUBJECT_PREFIX = u'qq'
+# EMAIL_HOST = 'smtp.qq.com'
+# EMAIL_PORT = 465
+
+
+# EMAIL_HOST = 'smtp.163.com'
+# EMAIL_PORT = 25
+# EMAIL_HOST_USER = 'google2050@163.com'
+# EMAIL_HOST_PASSWORD = '1163214465'
+# EMAIL_USE_TLS = False
+# DEFAULT_FROM_EMAIL = 'google2050@163.com'
+# EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
