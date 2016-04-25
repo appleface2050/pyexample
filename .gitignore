@@ -6,7 +6,8 @@
 *.log.*
 db.sqlite3-journal
 @test*
-
+django_for_test/.idea/
+django_for_test/db.sqlite3
 
 
 
